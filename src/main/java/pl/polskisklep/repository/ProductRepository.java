@@ -1,5 +1,6 @@
-package pl.polskisklep.dao;
+package pl.polskisklep.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import pl.polskisklep.model.Product;
@@ -7,5 +8,4 @@ import pl.polskisklep.model.Product;
 
 @Repository
 @Transactional
-public class ProductDao extends GenericDao<Product, Long> {
-}
+public interface ProductRepository extends JpaRepository<Product, Long> {}
